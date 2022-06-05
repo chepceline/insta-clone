@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'insta'
+    'insta',
 ]
 
 MIDDLEWARE = [
@@ -123,20 +123,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
+MEDIA_URL = '/img/'
 
 STATICFILES_DIRS = [
     BASE_DIR/'static'
 ]
 
-MEDIA_ROOT=BASE_DIR/'static/images'
+MEDIA_ROOT=BASE_DIR/'static/img'
 STATIC_ROOT = BASE_DIR/'staticfiles'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-LOGIN_REDIRECT_URL = 'index'
-LOGOUT_REDIRECT_URL = 'login'
-LOGIN_URL = '/user/login/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

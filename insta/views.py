@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from .forms import CreateUserForm, UploadImageForm, CommentForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-#from cloudinary.forms import cl_init_js_callbacks
+from cloudinary.forms import cl_init_js_callbacks
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import get_object_or_404
 import json

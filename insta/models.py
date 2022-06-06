@@ -5,6 +5,7 @@ from django.db.models.deletion import CASCADE
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from cloudinary.models import CloudinaryField
+from tinymce.models import HTMLField
 
 # Create your models here.
 
@@ -12,7 +13,7 @@ from cloudinary.models import CloudinaryField
 class Profile(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE,related_name='profile', null=True)
     name=models.CharField(max_length=50)
-    bio=models.TextField(max_length=500,blank=True)
+    bio=models.TextField(max_length=500, blank=True)
     profile_pic=CloudinaryField('images')
 
     def __str__(self):
@@ -41,7 +42,7 @@ class Profile(models.Model):
 
 
 class Post(models.Model):
-    #image = models.ImageField(upload_to='images/', null=True)
+    #image = models.ImageField(upload_to='images/')
     image = CloudinaryField('images')
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=250, blank=True)
@@ -101,5 +102,5 @@ class Follow(models.Model):
         return self.follower
 
 class Like(models.Model):
-	user = models.ForeignKey(User, related_name='likes', on_delete=models.CASCADE)
-	post = models.ForeignKey(Post, related_name='likes', on_delete=models.CASCADE)
+    user = models.ForeignKey(User,related_name='likes', on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name='likes', on_delete=models.CASCADE)

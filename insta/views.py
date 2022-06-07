@@ -11,8 +11,8 @@ import json
 from django.contrib.auth.models import User
 
 from django.contrib import messages
-# Create your views here.
 
+# Create your views here.
 
 @login_required(login_url='login')
 def index(request):
@@ -21,7 +21,7 @@ def index(request):
     all_users = User.objects.exclude(id=request.user.id)
     liked_posts = [i for i in Post.objects.all() if Like.objects.filter(user = request.user, post=i)]
     followed = [i for i in User.objects.all() if Follow.objects.filter(follower = request.user, followed=i)]
-
+    
     if request.method == 'POST':
         upload_form = UploadImageForm(request.POST, request.FILES)
         
@@ -30,6 +30,7 @@ def index(request):
             upload_form.save()
 
             return redirect('index')
+            
 
     else:
         upload_form = UploadImageForm()

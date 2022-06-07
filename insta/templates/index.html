@@ -16,6 +16,18 @@
                 </div>
                 <div class="modal-body">
                     {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Images</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Description">
+                    </div>
                     
                 </div>
                 <div class="modal-footer">

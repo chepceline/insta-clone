@@ -1,7 +1,7 @@
 {%extends "accounts/base.html"%} 
 {% load static %}
+{% block content%}
 
-{% block content %}
 <div class="wrapper">
     <div class="header">
         <div class="top">
@@ -43,8 +43,8 @@
         <div class="apps">
             <p>Get the app.</p>
             <div class="icons">
-                <a href="#"><img src="{% static 'img/googleplay.png' %}"  alt="appstore"></a>
-                <a href="#"><img src="{% static 'img/playstore.png' %}"  alt="googleplay"></a>
+                <a href="#"><img src="{% static 'img/googleplay.png' %}" alt="appstore"></a>
+                <a href="#"><img src="{% static 'img/playstore.png' %}" alt="googleplay"></a>
             </div>
         </div>
     </div>
@@ -65,8 +65,11 @@
             </ul>
         </div>
         <div class="copyright">
-            ©2022 INSTAGRAM
+            ©2021 INSTAGRAM
         </div>
     </div>
 </div>
-{% endblock %}
+
+{%endblock%}
+
+

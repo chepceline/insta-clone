@@ -38,7 +38,7 @@ class Profile(models.Model):
 
 
 class Post(models.Model):
-    # image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images/')
     image = CloudinaryField('images')
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=250, blank=True)

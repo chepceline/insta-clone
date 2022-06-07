@@ -81,6 +81,7 @@
 
                                 {% if post in liked_posts%}
                                 <a href="{% url 'like' post_id=post.id%}"><i
+                              cel250
                                         class='bx bxs-heart px-2 ms-0 text-danger'></i></a>
                                 {% else %}
                                 <a href="{% url 'like' post_id=post.id%}"><i class='bx bx-heart px-2 ms-0'></i></a>

@@ -1,4 +1,4 @@
-#!/home/celine/Desktop/python/insta-clone/virtual/bin/python3.8
+#!/home/celine/Desktop/moringa-projects/django/insta-clone/insta-clone/virtual/bin/python3.8
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

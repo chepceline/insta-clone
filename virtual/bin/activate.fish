@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/celine/Desktop/python/insta-clone/virtual"
+set -gx VIRTUAL_ENV "/home/celine/Desktop/moringa-projects/django/insta-clone/insta-clone/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
